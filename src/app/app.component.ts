@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_eleonora_sticoni';
+
+  images = [{url:'assets/background.jpg'},{url:'assets/background2.jpg'},{url:'assets/background3.jpg'},{url:'assets/background4.jpg'}];
 }
