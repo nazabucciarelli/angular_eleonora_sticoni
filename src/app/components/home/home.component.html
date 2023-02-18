@@ -28,23 +28,23 @@
                             <div class="container">
                                 <h2>Sesiones 1 a 1</h2>
                                 <h2>¿Qué tipo de coaching necesitas?</h2>
-                                <h3 id="hide-text-btn-1">💞 Coach Ontológico
-                                    <i class="fa fa-chevron-down"></i>
+                                <h3 (click)="toggleText1()">💞 Coach Ontológico
+                                    <i  class="fa fa-chevron-down"></i>
                                 </h3>
-                                <p class="hide description" id="hide-text-1">Cuando en nuestra vida se nos presenta
+                                <p *ngIf="text1Visible" class="description">Cuando en nuestra vida se nos presenta
                                     un quiebre y solos no podemos gestionarlo, tenemos la gran oportunidad de darnos
                                     cuenta que observadores somos de la realidad y mediante un proceso de
                                     acompañamiento profesional gestionarlo.</p>
-                                <h3 id="hide-text-btn-2">💜 Coach Integral
+                                <h3 (click)="toggleText2()">💜 Coach Integral
                                     <i class="fa fa-chevron-down"></i>
                                 </h3>
-                                <p class="hide description" id="hide-text-2">Mediante esta poderosa herramienta,
+                                <p *ngIf="text2Visible" class="description">Mediante esta poderosa herramienta,
                                     podemos vernos, reformular nuestra vida, perdonar, gestionar emociones, evitando
                                     las somatizaciones, elevando la autoestima.</p>
-                                <h3 id="hide-text-btn-3">💕 Coach Transpersonal
+                                <h3 (click)="toggleText3()">💕 Coach Transpersonal
                                     <i class="fa fa-chevron-down"></i>
                                 </h3>
-                                <p class="hide description" id="hide-text-3">Vamos a lo más profundo de nuestro SER,
+                                <p *ngIf="text3Visible" class="description">Vamos a lo más profundo de nuestro SER,
                                     trabajando la genealogia, introspección, permitiéndonos con autoconciencia,
                                     transitar la vida en paz y amor.</p>
                             </div>
@@ -97,10 +97,10 @@
                     <div class="col-md-10">
                         <div class="container titles">
                             <div class="container">
-                                <h2 id="thirdTitle">  Asesoría Jurídica  <img class="juridicIcon" src="assets/juridic_icon.png">
+                                <h2 id="thirdTitle" (click)="toggleJuridicText()">  Asesoría Jurídica <i id="hide-text-btn-juridic" class="fa fa-chevron-down"></i>
                                 </h2>
-                                <div class="container">
-                                    <h5 id="thirdSubtitle">Un servicio del derecho diferente. Acompañamiento Legal Humanizado. 
+                                <div *ngIf="juridicTextVisible" class="container">
+                                    <h5 class="description thirdSubtitle">Un servicio del derecho diferente. Acompañamiento Legal Humanizado. 
                                         Todo lo que necesitas con Profesionalismo, ética, respeto, acompasamiento y la trayectoria que me caracteriza.  </h5>
                                 </div>
                                     <ul id="temasList">
