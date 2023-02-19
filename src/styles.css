@@ -231,17 +231,6 @@ nav {
     color: rgb(255, 255, 255);
 }
 
-
-.carousel-control-next{
-    /*height: 80%; */
-}
-
-.carousel-control-prev{
-    /* height: 80%;*/
-}
-
-
-
 /* Empieza footer */
 
 footer {
@@ -416,6 +405,13 @@ span {
 
 /* Empieza media queries */
 
+@media (min-width: 1200px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1000px !important; 
+    }
+}
+
+
 @media screen and (max-width: 590px) {
     .contact_form {
         width: 450px;
@@ -486,8 +482,12 @@ span {
     }
 
     #paragraph-aval{
-        font-size: 13px;
-        width: 150px;
+        font-size: 14px;
+        width: 240px;
+    }
+
+    .container-aval{
+        margin-bottom: 10px;
     }
 
     #aval{
