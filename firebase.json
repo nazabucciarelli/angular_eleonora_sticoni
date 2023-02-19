@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./dist/angular_eleonora_sticoni",
+    "public": "dist/angular_eleonora_sticoni",
     "ignore": [
       "firebase.json",
       "**/.*",
