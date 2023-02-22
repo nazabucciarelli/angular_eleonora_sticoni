@@ -61,22 +61,31 @@ nav {
     background-image: url(assets/background4.jpg);
 }
 
-.container-aval{
-    display:flex;
+.container-course{
+    display: flex;
     justify-content: end;
-    align-items: center;
     position:absolute;
     bottom:0;
+    margin-left: 10px;
     width: 100%;
-}
-
-
-#paragraph-aval{
-    font-size: 18px;
     font-family: 'Dosis', sans-serif;
     color: rgb(255, 255, 255);
+}
+
+.container-aval{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#paragraph-aval{
+    font-size: 14px;
     font-weight: 400;
-    margin: 20px;
+    margin: 10px;
     padding: 0;
     text-align: end;
     float: left;
@@ -85,7 +94,15 @@ nav {
 }
 
 #aval{
-    height:100px;
+    height:70px;
+}
+
+.comienzo{
+    font-size:14px;
+}
+
+.comienzo p{
+    margin:0px;
 }
 
 
@@ -94,11 +111,53 @@ nav {
     font-weight: 600;
 }
 
+#moreInfo{
+    margin: 10px auto;
+    font-size: 17px;
+    border: none;
+    background-color: #ffffff;
+    color:#D63517;
+    padding:7px;
+    font-weight: 600;
+    transition:0.4s;
+    border-radius: 5px;
+}
+
+#moreInfo:hover{
+    transition: 0.4s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+#container-moreInfo{
+    opacity: 0;
+    animation: fade-in 2s forwards;
+}
+
+.comienzoMovil{
+    display: none;
+}
+
 #thirdTitle{
     font-size: 3em;
     display: flex;
     align-items: center;
 }
+
+#fourthTitle{
+    font-size: 3em;
+    text-align: center;
+}
+
+.fourthImage h3{
+    text-align: center;
+    font-weight: 600;
+}
+
 
 .thirdSubtitle{
     text-align: start;
@@ -405,13 +464,6 @@ span {
 
 /* Empieza media queries */
 
-@media (min-width: 1200px){
-    .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1000px !important; 
-    }
-}
-
-
 @media screen and (max-width: 590px) {
     .contact_form {
         width: 450px;
@@ -441,8 +493,27 @@ span {
         font-size: 24px;
     }
 
-    #textFourthImage{
-        font-size: 18px;
+    .textsFourthImage{
+        font-size: 14px;
+    }
+
+    #fourthTitle{
+        font-size:22px;
+    }
+
+    .fourthImage h3{
+        font-size: 15px;
+    }
+
+
+
+    #moreInfo{
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .moreInfoArrow{
+        font-size: inherit;
     }
 
     
@@ -467,10 +538,18 @@ span {
     }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 920px) {
     .hidden {
         display: none;
     }
+
+    .comienzo{
+        display: none;
+      }
+
+      .comienzoMovil{
+        display: block;
+      }
 
 }
 
@@ -482,12 +561,8 @@ span {
     }
 
     #paragraph-aval{
-        font-size: 14px;
-        width: 240px;
-    }
-
-    .container-aval{
-        margin-bottom: 10px;
+        font-size: 13px;
+        width: 300px;
     }
 
     #aval{
@@ -554,6 +629,7 @@ span {
     .banner-container{
         margin-top:50px;
     }
+
 }
 
 
@@ -568,6 +644,9 @@ span {
         font-size: 18px;
       }
 
+
+
+     
 
 }
 
@@ -606,6 +685,22 @@ span {
       .titlesSecond p{
         font-size: 12px;
       }
+
+      #fourthTitle{
+        font-size: 15px;
+      }
+
+      .textsFourthImage{
+        font-size: 10px ;
+      }
+
+      #moreInfo{
+        font-size: 10px;
+      }
+
+      #paragraph-aval{
+        font-size: 12px;
+      }
 }
 
 /* Movil S */
@@ -630,7 +725,6 @@ span {
   .secondImage {
     background-image: url(assets/vertical_background.jpg) !important;
 }
-
 
 }
 

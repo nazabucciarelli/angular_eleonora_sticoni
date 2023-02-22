@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit{
   text2Visible:boolean = false;
   text3Visible:boolean = false;
   juridicTextVisible:boolean = false;
+  courseTextVisible:boolean = false;
 
   toggleText1(){
     this.text1Visible = !this.text1Visible;
@@ -30,6 +31,9 @@ export class HomeComponent implements OnInit{
   }
   toggleJuridicText(){
     this.juridicTextVisible = !this.juridicTextVisible;
+  }
+  toggleCourseText(){
+    this.courseTextVisible = !this.courseTextVisible;
   }
 
   navigateToContact(){

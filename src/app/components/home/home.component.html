@@ -66,23 +66,55 @@
                     <div class="col-md-12">
                         <div class="container titles">
                             <div class="container">
-                                <h2 id="thirdTitle"> ¿Que es la Formación de COACHING INTEGRAL?
+                                <h2 id="fourthTitle"> FORMACIÓN DE COACHING INTEGRAL
                                 </h2>
-                                <p id="textFourthImage">
-                                    Es un proceso de autoconocimiento con Aval y Certificación Internacional Oficial, 
-                                    con salida laboral como entrenador/a o coach integral, sesiones 1 a 1.
+                                <p class="textsFourthImage">
+                                    🔅Si sos Terapeuta Holística y sentis la necesidad de brindar un servicio colmado de sugerencias, escuchar y colaborar en los procesos de otras personas...
                                 </p>
+                                <p class="textsFourthImage">
+                                    🔅Si perteneces al grupo de jóvenes y/o adultos mayores y deseas emprender un nuevo camino de transformación personal...
+                                </p>
+                                <div class="container-button">
+                                    <button (click)="toggleCourseText()" id="moreInfo"> ESTA FORMACIÓN ES PARA VOS <i class="fa fa-chevron-down moreInfoArrow"></i> </button>
+                                </div>
+                                <div *ngIf="courseTextVisible" id="container-moreInfo">
+                                    <p class="textsFourthImage">
+                                        ✅ Vas a aprender a brindar consultas individuales y además, ser tu propia guía en tu proceso de autotransformación con valiosas y efectivas herramientas que ayudan al restableciemiento de la paz interior. 
+                                    </p>
+                                    <p class="textsFourthImage">
+                                        ✅ Podrás acceder a herramientas que te permitirán alcanzar tus objetivos, tener una vida más plena y elevada en amor y sabiduría.
+                                    </p>
+                                    <p class="textsFourthImage">
+                                        ✅ Incluye clases de tutorías, material de estudio y acceso a una plataforma educativa sin límite de tiempo. El seguimiento es personalizado para el estudiante durante el cursado.
+                                    </p>
+                                    <p class="textsFourthImage comienzoMovil">
+                                        ⌛ Comienzo de clases en ABRIL. Presencial en Río Cuarto, Córdoba. Online para todo el país.
+                                    </p>
+                                </div>
+                                
                             </div>
                             
                             
                         </div>
 
                     </div>
-                        <div class="container-aval ">
-                            <p id="paragraph-aval">
-                                Avalada y Certificada Internacionalmente por "Vivir Bien y Hacer un Mundo Mejor"
-                            </p>
-                            <img id="aval" src="assets/aval.png">
+                        <div class="container-course row">
+                            <div class="col-md-auto comienzo">
+                                    <p>Las clases comienzan en ABRIL</p>
+                                    <p>Modalidad Presencial en: Río Cuarto, Córdoba, ARG.</p>
+                                    <p>Modalidad online en todo el país</p>
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                            <div class="col-md-auto">
+                                <div class="container-aval">
+                                    <p id="paragraph-aval">
+                                        Avalada y Certificada Internacionalmente por "Vivir Bien y Hacer un Mundo Mejor"
+                                    </p>
+                                    <img id="aval" src="assets/aval.png">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
