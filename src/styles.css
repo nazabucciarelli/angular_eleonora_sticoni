@@ -464,6 +464,12 @@ span {
 
 /* Empieza media queries */
 
+@media (min-width: 1200px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1000px !important; 
+    }
+}
+
 @media screen and (max-width: 590px) {
     .contact_form {
         width: 450px;
