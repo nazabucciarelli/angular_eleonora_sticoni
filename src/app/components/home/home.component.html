@@ -3,16 +3,10 @@
 		<div class="picsum-img-wrapper">
 			<div class="banner-container firstImage">
                 <div class="row banner-row">
-                    <div class="col-md-7">
-                        <div class="container titles">
-                            <div class="container center">
-                                <h2>EL AMOR ES EXPERIMENTAR <br> A LOS OTROS COMO SON</h2>
-                            </div>
-
-                        </div>
-
+                    <div class="container titles mainItem col-md-7">
+                        <h2>EL AMOR ES EXPERIMENTAR <br> A LOS OTROS COMO SON</h2>
                     </div>
-                    <div class="col-md-4 hidden"></div>
+                    <div class="col-md-5 hidden"></div>
                 </div>
 
             </div>
@@ -23,38 +17,33 @@
 		<div class="picsum-img-wrapper">
 			<div class="banner-container secondImage">
                 <div class="row banner-row">
-                    <div class="col-md">
                         <div class="container-fluid titlesSecond">
                             <div class="container">
                                 <h2>Sesiones 1 a 1</h2>
-                                <h2>¿Qué tipo de coaching necesitas?</h2>
-                                <h3 (click)="toggleText1()">💞 Coach Ontológico
-                                    <i  class="fa fa-chevron-down"></i>
+                                <h2 id="subtitleSecond">¿Qué tipo de coaching necesitas?</h2>
+                                <h3 id="hide-text-btn-1">💞 Coach Ontológico
+                                    <i (click)="isCollapsedTipoCoaching1 = !isCollapsedTipoCoaching1" [attr.aria-expanded]="!isCollapsedTipoCoaching1" aria-controls="descripcion1" class="fa fa-chevron-down"></i>
                                 </h3>
-                                <p *ngIf="text1Visible" class="description">Cuando en nuestra vida se nos presenta
+                                <p id="descripcion1" class="description" [ngbCollapse]="isCollapsedTipoCoaching1" >Cuando en nuestra vida se nos presenta
                                     un quiebre y solos no podemos gestionarlo, tenemos la gran oportunidad de darnos
                                     cuenta que observadores somos de la realidad y mediante un proceso de
                                     acompañamiento profesional gestionarlo.</p>
-                                <h3 (click)="toggleText2()">💜 Coach Integral
-                                    <i class="fa fa-chevron-down"></i>
+                                <h3 id="hide-text-btn-2">💜 Coach Integral
+                                    <i (click)="isCollapsedTipoCoaching2 = !isCollapsedTipoCoaching2" [attr.aria-expanded]="!isCollapsedTipoCoaching2" aria-controls="descripcion2"  class="fa fa-chevron-down"></i>
                                 </h3>
-                                <p *ngIf="text2Visible" class="description">Mediante esta poderosa herramienta,
+                                <p id="descripcion2" class="description" [ngbCollapse]="isCollapsedTipoCoaching2">Mediante esta poderosa herramienta,
                                     podemos vernos, reformular nuestra vida, perdonar, gestionar emociones, evitando
                                     las somatizaciones, elevando la autoestima.</p>
-                                <h3 (click)="toggleText3()">💕 Coach Transpersonal
-                                    <i class="fa fa-chevron-down"></i>
+                                <h3 id="hide-text-btn-3">💕 Coach Transpersonal
+                                    <i (click)="isCollapsedTipoCoaching3 = !isCollapsedTipoCoaching3" [attr.aria-expanded]="!isCollapsedTipoCoaching3" aria-controls="descripcion3"  class="fa fa-chevron-down"></i>
                                 </h3>
-                                <p *ngIf="text3Visible" class="description">Vamos a lo más profundo de nuestro SER,
+                                <p id="descripcion3" class="description" [ngbCollapse]="isCollapsedTipoCoaching3">Vamos a lo más profundo de nuestro SER,
                                     trabajando la genealogia, introspección, permitiéndonos con autoconciencia,
                                     transitar la vida en paz y amor.</p>
                             </div>
 
                         </div>
-
-                    </div>
-                    <div class="col-md-0 hidden"></div>
                 </div>
-
             </div>
 		</div>
 		
@@ -62,61 +51,62 @@
 	<ng-template ngbSlide>
 		<div class="picsum-img-wrapper">
 			<div class="banner-container fourthImage">
-                <div class="row banner-row">
-                    <div class="col-md-12">
-                        <div class="container titles">
-                            <div class="container">
-                                <h2 id="fourthTitle"> FORMACIÓN DE COACHING INTEGRAL
-                                </h2>
-                                <p class="textsFourthImage">
-                                    🔅Si sos Terapeuta Holística y sentis la necesidad de brindar un servicio colmado de sugerencias, escuchar y colaborar en los procesos de otras personas...
-                                </p>
-                                <p class="textsFourthImage">
-                                    🔅Si perteneces al grupo de jóvenes y/o adultos mayores y deseas emprender un nuevo camino de transformación personal...
-                                </p>
-                                <div class="container-button">
-                                    <button (click)="toggleCourseText()" id="moreInfo"> ESTA FORMACIÓN ES PARA VOS <i class="fa fa-chevron-down moreInfoArrow"></i> </button>
-                                </div>
-                                <div *ngIf="courseTextVisible" id="container-moreInfo">
-                                    <p class="textsFourthImage">
-                                        ✅ Vas a aprender a brindar consultas individuales y además, ser tu propia guía en tu proceso de autotransformación con valiosas y efectivas herramientas que ayudan al restableciemiento de la paz interior. 
-                                    </p>
-                                    <p class="textsFourthImage">
-                                        ✅ Podrás acceder a herramientas que te permitirán alcanzar tus objetivos, tener una vida más plena y elevada en amor y sabiduría.
-                                    </p>
-                                    <p class="textsFourthImage">
-                                        ✅ Incluye clases de tutorías, material de estudio y acceso a una plataforma educativa sin límite de tiempo. El seguimiento es personalizado para el estudiante durante el cursado.
-                                    </p>
-                                    <p class="textsFourthImage comienzoMovil">
-                                        ⌛ Comienzo de clases en ABRIL. Presencial en Río Cuarto, Córdoba. Online para todo el país.
-                                    </p>
-                                </div>
-                                
-                            </div>
-                            
-                            
+                <div class="container titles formacionCoachingItem">
+                    <div class="container">
+                        <h2 id="fourthTitle"> FORMACIÓN DE COACHING INTEGRAL
+                        </h2>
+                        <p class="textsFourthImage">
+                            🔅Si sos de las personas dispuestas a conocerse más y deseas emprender un
+                            nuevo camino de transformación personal...
+                        </p>
+                        <p class="textsFourthImage">
+                            🔅Si sos Terapeuta Holística y sentis la necesidad de brindar un servicio
+                            colmado de sugerencias, escuchar y colaborar en los procesos de otras
+                            personas...
+                        </p>
+                        <div class="container-button">
+                            <button id="moreInfo" (click)="isCollapsedFormacionCoaching = !isCollapsedFormacionCoaching" [attr.aria-expanded]="!isCollapsedFormacionCoaching" aria-controls="container-moreInfo"> ESTA FORMACIÓN ES PARA VOS <i
+                                    class="fa fa-chevron-down moreInfoArrow"></i> </button>
                         </div>
+                        <div id="container-moreInfo" [ngbCollapse]="isCollapsedFormacionCoaching">
+                            <p class="textsFourthImage">
+                                ✅ Vas a aprender a brindar consultas individuales y además, ser tu propia
+                                guía en tu proceso de autotransformación con valiosas y efectivas
+                                herramientas que ayudan al restableciemiento de la paz interior.
+                            </p>
+                            <p class="textsFourthImage">
+                                ✅ Podrás acceder a herramientas que te permitirán alcanzar tus objetivos,
+                                tener una vida más plena y elevada en amor y sabiduría.
+                            </p>
+                            <p class="textsFourthImage">
+                                ✅ Incluye clases de tutorías, material de estudio y acceso a una plataforma
+                                educativa sin límite de tiempo. El seguimiento es personalizado para el
+                                estudiante durante el cursado.
+                            </p>
+                            <p class="textsFourthImage comienzoMovil">
+                                ⌛ Comienzo de clases en AGOSTO. Presencial en Río Cuarto, Córdoba. Online
+                                para todo el país.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="container-course row">
+                    <div class="col-md-auto comienzo">
+                        <p>Las clases comienzan en AGOSTO</p>
+                        <p>Modalidad Presencial en: Río Cuarto, Córdoba, ARG.</p>
+                        <p>Modalidad online en todo el país</p>
                     </div>
-                        <div class="container-course row">
-                            <div class="col-md-auto comienzo">
-                                    <p>Las clases comienzan en ABRIL</p>
-                                    <p>Modalidad Presencial en: Río Cuarto, Córdoba, ARG.</p>
-                                    <p>Modalidad online en todo el país</p>
-                            </div>
-                            <div class="col">
-                                
-                            </div>
-                            <div class="col-md-auto">
-                                <div class="container-aval">
-                                    <p id="paragraph-aval">
-                                        Avalada y Certificada Internacionalmente por "Vivir Bien y Hacer un Mundo Mejor"
-                                    </p>
-                                    <img id="aval" src="assets/aval.png">
-                                </div>
-                            </div>
+                    
+                    <div class="col-md-auto">
+                        <div class="container-aval">
+                            <p id="paragraph-aval">
+                                <b>Primer Escuela Internacional</b>  de Coaching Integral, Avalada y Certificada por "Vivir Bien y Hacer un Mundo Mejor"
+                            </p>
+                            <img id="aval" src="assets/aval.png">
                         </div>
                     </div>
+                </div>
 
             </div>
 		</div>
@@ -126,49 +116,82 @@
 		<div class="picsum-img-wrapper">
             <div class="banner-container thirdImage">
                 <div class="row banner-row">
-                    <div class="col-md-10">
-                        <div class="container titles">
-                            <div class="container">
-                                <h2 id="thirdTitle" (click)="toggleJuridicText()">  Asesoría Jurídica <i id="hide-text-btn-juridic" class="fa fa-chevron-down"></i>
-                                </h2>
-                                <div *ngIf="juridicTextVisible" class="container">
-                                    <h5 class="description thirdSubtitle">Un servicio del derecho diferente. Acompañamiento Legal Humanizado. 
-                                        Todo lo que necesitas con Profesionalismo, ética, respeto, acompasamiento y la trayectoria que me caracteriza.  </h5>
-                                </div>
-                                    <ul id="temasList">
-                                        <li>
-                                            Temas Personales
-                                        </li>
-                                        <li>
-                                            Temas Familiares
-                                        </li>
-                                        <li>
-                                            Temas Administrativos
-                                        </li>
-                                        <li>
-                                            Temas Penales
-                                        </li>
-                                    </ul>
-                                    <div class="container container-button">
-                                        <button id="juridicButton" routerLink="/contact">
-                                            AGENDÁ TU CONSULTA
-                                        </button>
-                                    </div>
-                                    
-                                
-                            </div>
+                    <div class="container titles asesoriaJuridicaItem">
+                        <div class="container">
+                            <h2 id="thirdTitle"> Asesoría Jurídica <i id="hide-text-btn-juridic"
+                                (click)="isCollapsedAsesoriaJuridica = !isCollapsedAsesoriaJuridica" [attr.aria-expanded]="!isCollapsedAsesoriaJuridica" aria-controls="container-moreInfo" class="fa fa-chevron-down"></i>
+                        </h2>
+                        <div class="container">
+                            <h5 [ngbCollapse]="isCollapsedAsesoriaJuridica" class="description thirdSubtitle" id="hide-text-juridic">Un servicio
+                                del derecho diferente. Acompañamiento Legal Humanizado.
+                                Todo lo que necesitas con Profesionalismo, ética, respeto, acompasamiento y
+                                la trayectoria que me caracteriza. </h5>
                         </div>
-                            
+                        <ul id="temasList">
+                            <li>
+                                Temas Personales
+                            </li>
+                            <li>
+                                Temas Familiares
+                            </li>
+                            <li>
+                                Temas Administrativos
+                            </li>
+                            <li>
+                                Temas Penales
+                            </li>
+                        </ul>
+                        <div class="container container-button">
+                            <button id="juridicButton" onclick="location.href='contacto.html'">
+                                AGENDÁ TU CONSULTA
+                            </button>
+                        </div>
+                        </div>
                     </div>
-                    <div class="col-md-2 hidden"></div>
                 </div>
 
             </div>
 		</div>
 
 	</ng-template>
+    <ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+            <div class="banner-container sixthImage">
+                <div class="container titles escuelaItem">
+                    <div class="container">
+                        <h2> ESCUELA
+                        </h2>
+                        <ul id="escuelaList">
+                            <li>✅ Formaciones Internacionales en Coaching Integral</li>
+                            <li>✅ Cursos</li>
+                            <li>✅ Talleres</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+	</ng-template>
 </ngb-carousel>
 
+<!-- sanación de útero section -->
+<div class="sanacion-utero-section row">
+    <div class="col-md-6">
+        <img src="../../../assets/collage_sanacion.png" alt="">
+    </div>
+    <div class="col-md-6 sanacion-info-container">
+        <h2 class="subtitle">
+            Sanación de útero
+        </h2>
+        <p>
+            Nuestras vivencias están en la memoria de nuestro útero y al ser el centro de creación más maravilloso
+            que puede existir, tiene el potencial de crear, generar, curar y nutrir hasta las heridas más profundas
+            de nuestra constelación, nuestro cuerpo, mente y corazón.
+        </p>
+    </div>
+</div>
+
+<!-- footer section -->
 <footer>
     <div class="container footer-container">
         <a href="https://www.instagram.com/eleonora.sticoni/" target="_blank"><img class="red"

@@ -14,27 +14,12 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  text1Visible:boolean = false;
-  text2Visible:boolean = false;
-  text3Visible:boolean = false;
-  juridicTextVisible:boolean = false;
-  courseTextVisible:boolean = false;
+  isCollapsedFormacionCoaching = true;
+  isCollapsedAsesoriaJuridica = true;
+  isCollapsedTipoCoaching1 = true;
+  isCollapsedTipoCoaching2 = true;
+  isCollapsedTipoCoaching3 = true;
 
-  toggleText1(){
-    this.text1Visible = !this.text1Visible;
-  }
-  toggleText2(){
-    this.text2Visible = !this.text2Visible;
-  }
-  toggleText3(){
-    this.text3Visible = !this.text3Visible;
-  }
-  toggleJuridicText(){
-    this.juridicTextVisible = !this.juridicTextVisible;
-  }
-  toggleCourseText(){
-    this.courseTextVisible = !this.courseTextVisible;
-  }
 
   navigateToContact(){
     this.router.navigate(['/contact']);
