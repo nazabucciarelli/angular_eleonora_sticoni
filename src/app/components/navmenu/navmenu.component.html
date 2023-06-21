@@ -8,8 +8,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a routerLink='/home' routerLinkActive='active' class="nav-link" aria-current="page">Inicio</a>
-                <a routerLink='/contact' routerLinkActive='active' class="nav-link">Contacto</a>
+                <a routerLink='/home' (click)="closeNavbar()" routerLinkActive='active' class="nav-link" aria-current="page">Inicio</a>
+                <a routerLink='/contact' (click)="closeNavbar()" routerLinkActive='active' class="nav-link">Contacto</a>
             </div>
         </div>
     </div>
