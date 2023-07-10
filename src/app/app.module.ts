@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
+import { FormationComponent } from './components/formation/formation.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,15 @@ import { NavmenuComponent } from './components/navmenu/navmenu.component';
     HomeComponent,
     ContactComponent,
     NotfoundComponent,
-    NavmenuComponent
+    NavmenuComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     NgbModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  providers: [], 
+  bootstrap: [AppComponent] 
+}) 
+export class AppModule { } 

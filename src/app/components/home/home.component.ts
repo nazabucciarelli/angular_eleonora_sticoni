@@ -13,18 +13,6 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
   }
-
-  isCollapsedFormacionCoaching = true;
-  isCollapsedAsesoriaJuridica = true;
-  isCollapsedTipoCoaching1 = true;
-  isCollapsedTipoCoaching2 = true;
-  isCollapsedTipoCoaching3 = true;
-
-
-  navigateToContact(){
-    this.router.navigate(['/contact']);
-  }
-
   
 }
 
