@@ -32,7 +32,9 @@
     font-size: var(--text-size);
     text-indent: 6%;
     margin:0;
+    text-align: justify;
 }
+
 
 ul {
     list-style: none;
@@ -82,11 +84,20 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/backgroundSixt.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/backgroundSixth.jpg);
 }
 
 #avalimg{
-    height: 80px;
+    height: 40px;
+    margin: 5px;
+}
+
+#avaltext{
+    font-size:0.7em;
+}
+
+.aval_container{
+    justify-content: end;
 }
 
 /* ends home*/
@@ -260,11 +271,15 @@ footer {
 @media screen and (max-width: 1300px) {
     .home-background{
         background-position: 50%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/vertical_background.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/verticalelefinal.jpg);
     }
 }
 
 @media screen and (max-width: 600px) {
+
+    .aval_container{
+        justify-content: center;
+    }
 
 
     .brandButton{
