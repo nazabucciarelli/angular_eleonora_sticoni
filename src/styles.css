@@ -88,8 +88,8 @@ nav {
 }
 
 #avalimg{
-    height: 40px;
-    margin: 5px;
+    height: 35px;
+    
 }
 
 #avaltext{
@@ -281,6 +281,9 @@ footer {
         justify-content: center;
     }
 
+    #avaltext{
+        font-size: 0.6em;
+    }
 
     .brandButton{
         transform: scale(0.6);
