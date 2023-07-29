@@ -84,21 +84,18 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/backgroundSixth.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/eleli.jpg);
 }
 
 #avalimg{
-    height: 35px;
-    
+    height: 30px;
 }
 
 #avaltext{
     font-size:0.7em;
+    width: 20%;
 }
 
-.aval_container{
-    justify-content: end;
-}
 
 /* ends home*/
 
@@ -268,7 +265,7 @@ footer {
     }
 
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 800px) {
     .home-background{
         background-position: 50%;
         background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/verticalelefinal.jpg);
@@ -277,16 +274,17 @@ footer {
 
 @media screen and (max-width: 600px) {
 
-    .aval_container{
-        justify-content: center;
-    }
-
     #avaltext{
         font-size: 0.6em;
+        width: 100%;
+    }
+
+    #avalimg{
+        display: none;
     }
 
     .brandButton{
-        transform: scale(0.6);
+        transform: scale(0.9);
     }
 
     .title{
