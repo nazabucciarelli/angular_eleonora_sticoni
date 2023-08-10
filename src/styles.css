@@ -84,7 +84,14 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     height: 80vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/eleli.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/cuthor.jpg);
+}
+
+.home-background .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 #avalimg{
@@ -267,8 +274,12 @@ footer {
 }
 @media screen and (max-width: 800px) {
     .home-background{
-        background-position: 50%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/verticalelefinal.jpg);
+        background-position: 45% ;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/probver.JPG);
+    }
+
+    .home-background .container{
+        justify-content: center;
     }
 }
 
@@ -288,7 +299,7 @@ footer {
     }
 
     .title{
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .subtitle{
