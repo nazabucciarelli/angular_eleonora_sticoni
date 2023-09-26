@@ -30,7 +30,7 @@
 
 .text {
     font-size: var(--text-size);
-    text-indent: 6%;
+    text-indent: 2%;
     margin:0;
     text-align: justify;
 }
@@ -59,7 +59,7 @@ nav {
     font-family: var(--primary-font);
     color: var(--primary-color) !important;
     font-weight: 600 !important;
-    font-size: 1.3em !important;
+    font-size: 1.2em !important;
     transition: 0.3s !important;
 }
 
@@ -164,6 +164,21 @@ nav {
   }
 
 /* ends workshops */
+
+/* start about me */
+
+.about-me img{
+    margin:1em;
+    border-radius: 1em;
+    width: 50%;
+    float: left;
+}
+
+.about-me .text{
+    margin-bottom: 1em;
+}
+
+/* ends about me */
 /* start contact  */
 
 .contact-container {
@@ -249,7 +264,7 @@ nav {
     border: 2px solid var(--primary-color);
 }
 
-/* ends formulario */
+/* ends contact */
 
 /* start footer */
 
@@ -320,6 +335,14 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+
+    .about-me img{
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+        border-radius: 2em;
+    }
 
     #avaltext{
         font-size: 0.6em;

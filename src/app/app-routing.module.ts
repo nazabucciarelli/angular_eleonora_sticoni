@@ -5,11 +5,13 @@ import { HomeComponent } from './components/home/home.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { FormationComponent } from './components/formation/formation.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
+import { AboutmeComponent } from './components/aboutme/aboutme.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch: 'full'},
   {path: 'formation', component: FormationComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'about-me', component: AboutmeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'workshops',component: WorkshopsComponent},
   {path: '**', component: NotfoundComponent}
