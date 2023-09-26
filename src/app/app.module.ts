@@ -10,6 +10,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { FormationComponent } from './components/formation/formation.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
+import { AboutmeComponent } from './components/aboutme/aboutme.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WorkshopsComponent } from './components/workshops/workshops.component';
     NotfoundComponent,
     NavmenuComponent,
     FormationComponent,
-    WorkshopsComponent
+    WorkshopsComponent,
+    AboutmeComponent
   ],
   imports: [
     BrowserModule,
