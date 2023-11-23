@@ -8,6 +8,19 @@
     --text-size: 1.1em;
 }
 
+/* spinner loader  */
+
+.spinner-border{
+    color: var(--primary-color) !important;
+}
+
+.spinner-container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*  start general styles */
 
 *{

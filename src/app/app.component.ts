@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'angular_eleonora_sticoni';
+export class AppComponent implements AfterContentChecked{
+  showLoader: boolean = true;
 
-  ngOnInit():void{
-
+  constructor(){}
+  
+  ngAfterContentChecked() {
+    this.showLoader = false;  
   }
-
 
 }
 
