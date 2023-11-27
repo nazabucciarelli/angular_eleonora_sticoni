@@ -8,11 +8,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a routerLink='/home' (click)="closeNavbar()" routerLinkActive='active' class="nav-link" aria-current="page">Inicio</a>
-                <a routerLink='/formation' (click)="closeNavbar()" routerLinkActive='active' class="nav-link">Formación</a>
-                <a routerLink='/workshops' (click)="closeNavbar()" routerLinkActive='active' class="nav-link">Talleres</a>
-                <a routerLink='/about-me' (click)="closeNavbar()" routerLinkActive='active' class="nav-link">Quién soy</a>
-                <a routerLink='/contact' (click)="closeNavbar()" routerLinkActive='active' class="nav-link">Contacto</a>
+                <a (click)="scrollTo('app-home')" class="nav-link" aria-current="page">Inicio</a>
+                <a (click)="scrollTo('app-aboutme')" class="nav-link">Quién soy</a>
+                <a (click)="scrollTo('app-formation')" class="nav-link">Formación</a>
+                <a (click)="scrollTo('app-workshops')" class="nav-link">Talleres</a>
+                <a routerLink="/gallery" class="nav-link">Galería</a>
+                <a routerLink="/contact" class="nav-link">Contacto</a>
             </div>
         </div>
     </div>

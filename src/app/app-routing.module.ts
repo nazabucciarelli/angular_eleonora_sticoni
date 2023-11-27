@@ -6,10 +6,12 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { FormationComponent } from './components/formation/formation.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch: 'full'},
   {path: 'formation', component: FormationComponent},
+  {path: 'gallery', component: GalleryComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about-me', component: AboutmeComponent},
   {path: 'contact', component: ContactComponent},

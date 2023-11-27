@@ -1,4 +1,6 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-navmenu',
@@ -7,9 +9,16 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 })
 export class NavmenuComponent {
   
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private scrollService: ScrollService,
+    private router: Router) { }
 
   ngOnInit() {
+  }
+
+  scrollTo(sectionId: string) {
+    this.router.navigateByUrl('/home').then(() => {
+      this.scrollService.scrollToSection(sectionId, 80);
+    }); 
   }
 
   @HostListener('document:click', ['$event'])

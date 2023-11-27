@@ -11,6 +11,7 @@ import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { FormationComponent } from './components/formation/formation.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
     NavmenuComponent,
     FormationComponent,
     WorkshopsComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
