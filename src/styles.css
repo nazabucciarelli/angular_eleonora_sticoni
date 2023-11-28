@@ -331,6 +331,7 @@ footer {
     .home-background{
         background-position: 45% ;
         background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/vertical.JPG);
+        background-attachment: local;
     }
 
     .home-background .container{
