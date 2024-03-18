@@ -13,7 +13,8 @@ import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommunityComponent } from './components/community/community.component';
-
+import { SessionsComponent } from './components/sessions/sessions.component';
+import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,10 @@ import { CommunityComponent } from './components/community/community.component';
     WorkshopsComponent,
     AboutmeComponent,
     GalleryComponent,
-    CommunityComponent
-  ],
+    CommunityComponent,
+    SessionsComponent,
+    AlertDialogComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
