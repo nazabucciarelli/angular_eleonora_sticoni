@@ -12,6 +12,8 @@ import { FormationComponent } from './components/formation/formation.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { CommunityComponent } from './components/community/community.component';
+
 
 @NgModule({
   declarations: [
@@ -23,14 +25,15 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     FormationComponent,
     WorkshopsComponent,
     AboutmeComponent,
-    GalleryComponent
+    GalleryComponent,
+    CommunityComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     NgbModule
   ],
-  providers: [], 
-  bootstrap: [AppComponent] 
-}) 
+  providers: [],
+  bootstrap: [AppComponent]
+})
 export class AppModule { } 

@@ -1,19 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Logo de Eleonora Sticoni"
+        <a class="navbar-brand" href="index.html"><img src="assets/logo_brand.png" alt="Logo de Eleonora Sticoni"
                 id="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a (click)="scrollTo('app-home')" class="nav-link" aria-current="page">Inicio</a>
-                <a (click)="scrollTo('app-aboutme')" class="nav-link">Quién soy</a>
-                <a (click)="scrollTo('app-formation')" class="nav-link">Formación</a>
-                <a (click)="scrollTo('app-workshops')" class="nav-link">Talleres</a>
-                <a routerLink="/gallery" class="nav-link">Galería</a>
-                <a routerLink="/contact" class="nav-link">Contacto</a>
+                <a routerLink="/home" class="nav-link" aria-current="page">INICIO</a>
+                <a routerLink="/about-me" class="nav-link">SOBRE MI</a>
+                <a routerLink="/community" class="nav-link">COMUNIDAD</a>
+                <a routerLink="/sessions" class="nav-link">SESIONES</a>
+                <a routerLink="/gallery" class="nav-link">GALERÍA</a>
+                <a routerLink="/formation-workshops" class="nav-link">FORMACIÓN Y TALLERES</a>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^15.1.0",
+    "@angular/animations": "^17.3.0",
     "@angular/common": "^15.1.0",
     "@angular/compiler": "^15.1.0",
     "@angular/core": "^15.1.0",
@@ -21,9 +21,11 @@
     "@angular/router": "^15.1.0",
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "@popperjs/core": "^2.11.6",
+    "@typewriterjs/typewriterjs": "^1.0.0-alpha.2",
+    "@typewriterjs/typewriterjs-angular": "^1.0.0-alpha.3",
     "bootstrap": "^5.2.3",
     "ng": "^0.0.0",
-    "ngx-spinner": "^16.0.2",
+    "ngx-sbz-type-delete": "^2.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

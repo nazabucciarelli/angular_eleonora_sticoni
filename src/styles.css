@@ -1,23 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
+
+@font-face {
+    font-family: 'Cherolina';
+    src: url('./assets/fonts/Cherolina.ttf') format('truetype');
+}
+
 :root {
-    --primary-color: #D63517;
-    --primary-font: 'Montserrat', sans-serif;
-    --title-size: 3.5em;
+    --primary-color: #683551;
+    --secondary-color: #68670f;
+    --light-color: #e6cbfa;
+    --tertiary-color: #f6e1c8;
+    --fourth-color: #da601b;
+    --primary-font: "Capriola", sans-serif;
+    --secondary-font: "Cherolina", sans-serif;
+    --title-size: 3em;
     --subtitle-size: 3em;
     --text-size: 0.9em;
 }
 
 /*  start general styles */
 
-*{
+html,
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+* {
     font-family: var(--primary-font);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(228, 228, 228, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .title {
     font-size: var(--title-size);
-    text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--primary-color);
 }
 
@@ -31,8 +51,10 @@
 .text {
     font-size: var(--text-size);
     text-indent: 2%;
-    margin:0;
     text-align: justify;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
 }
 
 
@@ -47,20 +69,66 @@ ul li::before {
     color: var(--primary-color);
 }
 
+.cursive-title {
+    font-family: var(--secondary-font);
+    font-size: 11em;
+    font-style: italic;
+    margin-bottom: -0.4em;
+    margin-top: -0.3em;
+    color: var(--secondary-color);
+}
+
+.brand-button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 2em;
+    color: #fff;
+    padding: 0.5em 5em;
+    box-shadow: 5px 5px 10px 5px #00000050;
+    transition: 0.3s;
+}
+
+.brand-button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    opacity: 0.9;
+}
+
+.divisor {
+    font-size: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.divisor svg {
+    width: 10em;
+    opacity: 0.8;
+}
+
+.divisor::before,
+.divisor::after {
+    flex: 1;
+    content: '';
+    padding: 0.3px;
+    background-color: rgb(133, 133, 133);
+    margin: 5em;
+}
+
 /* end general styles*/
 
 /* start navbar */
 
 nav {
     box-shadow: 1px 5px 60px rgba(0, 0, 0, 0.200);
+    background-color: var(--primary-color) !important;
 }
 
 .nav-link {
     font-family: var(--primary-font);
-    color: var(--primary-color) !important;
-    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.945) !important;
     font-size: 1em !important;
     transition: 0.3s !important;
+    padding: 0.5em !important;
 }
 
 .nav-link:hover {
@@ -71,7 +139,7 @@ nav {
 }
 
 #logo {
-    width: 240px;
+    height: 80px;
     margin: 0;
 }
 
@@ -81,109 +149,95 @@ nav {
 
 /* start home */
 
-.home-background{
-    background-size: cover;
-    background-attachment: fixed;
-    height: 90vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/landscape.jpg);
-    background-position: 40%;
+.header-title h2 {
+    color: #fff;
+    font-size: 2em;
 }
 
-.home-background .container{
+.header-title h1 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 3em;
+}
+
+.home-background {
+    background-size: cover;
+    background-attachment: fixed;
+    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.082)), url(assets/landscape_background.jpg);
+    background-position-y: 100%;
+    background-position-x: 150px;
+}
+
+.home-background div {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 
-.aval-container{
+.aval-container {
     margin-bottom: 5em;
 }
 
-#avalimg{
+#avalimg {
     height: 30px;
 }
 
-#avaltext{
-    font-size:0.7em;
+#avaltext {
+    font-size: 0.7em;
     width: 20%;
 }
+
+.phrase-container {
+    background-color: #fff;
+    margin-top: 2em;
+    color: var(--primary-color)
+}
+
+.phrase-container span{
+    color: var(--fourth-color);
+}
+
 
 /* ends home*/
 
 /* start formation */
 
-.brandButton {
-    margin: 0 auto;
-    text-decoration: none;
-    color: white;
-    background-color: var(--primary-color);
-    padding: 1em;
-    font-size: 1.3em;
-    border-radius: 1.5em;
-    font-weight: 600;
-    font-family: var(--primary-font);
-    transition: 0.3s;
-}
-
-.brandButton:hover{
-    transition: 0.3s;
-    transform: scale(1.1);
-    color: #fff;
-}
-
 /* ends formation */
-/* start workshops */ 
+/* start workshops */
 
-.title_workshop{
-    font-size: 1.9em;
-    font-weight: 500;
-    margin: 1em 0 1em 0;
-}
 
-.workshop_image{
-    border-radius: 2em;
-}
-
-.workshops article{
-    margin: 2em 0 2em 0
-}
-
-.divisor{
-    font-size: 2px;
-  display: flex;
-  align-items: center;
-}
-.divisor svg {
-    width: 10em;
-    opacity: 0.8;
-}
-
-.divisor::before, .divisor::after {
-    flex: 1;
-    content: '';
-    padding: 0.3px;
-    background-color: rgb(133, 133, 133);
-    margin: 5em;
-  }
 
 /* ends workshops */
 
-/* start about me */
+/* start community */
 
-.about-me img{
-    margin:1em;
-    border-radius: 1em;
-    width: 50%;
-    float: left;
+.community-title{
+    margin-bottom: -1.5em;
 }
 
-.about-me .text{
-    margin-bottom: 1em;
+/* ends community */
+
+/* starts about me */
+
+.subtitle-about {
+    font-size: 4em;
+}
+
+.about-me img {
+    border-radius: 2em;
+    height: 100%;
+    max-height: 500px;
+    transition: 0.3s;
+}
+
+.about-me img:hover{
+    transition: 0.3s !important;
+    transform: scale(0.9) !important;
 }
 
 /* ends about me */
-/* start contact  */
+/* starts contact  */
 
 .contact-container {
     background-image: url(assets/trama.png);
@@ -322,26 +376,31 @@ footer {
 /* Portatil */
 @media screen and (max-height: 900px) {
 
-    .brandButton{
+    .brandButton {
         font-size: 1em;
     }
 
 }
+
 @media screen and (max-width: 800px) {
-    .home-background{
-        background-position: 45% ;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)),url(assets/vertical.JPG);
+    .home-background {
+        background-position: 45%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/vertical.JPG);
         background-attachment: local;
     }
 
-    .home-background .container{
+    .home-background .container {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 600px) {
 
-    .about-me img{
+    .cursive-title{
+        font-size: 6em;
+    }
+
+    .about-me img {
         float: none;
         width: 100%;
         margin: 0;
@@ -349,26 +408,27 @@ footer {
         border-radius: 2em;
     }
 
-    #avaltext{
+    #avaltext {
         font-size: 0.6em;
         width: 100%;
     }
 
-    .brandButton{
+    .brandButton {
         transform: scale(0.9);
     }
 
-    .title{
+    .title {
         font-size: 1.8em;
     }
 
-    .subtitle{
+    .subtitle {
         font-size: 1.7em;
     }
 
-    .small-text{
+    .small-text {
         font-size: 0.7em;
     }
+
     .form-title {
         font-size: 20px;
     }
@@ -392,9 +452,6 @@ footer {
 }
 
 @media screen and (max-width: 300px) {
-    .contact-container {
-        padding-top: 20px;
-    }
 
     .wsp-button {
         font-size: 14px;
@@ -409,19 +466,4 @@ footer {
         width: 140px;
     }
 
-    .form-title,
-    .form-subtitle,
-    .contact_form label,
-    .contact_form input,
-    .contact_form textarea,
-    .contact_form button,
-    .contact_form select {
-        font-size: 0.8em;
-    }
-
-    .formulario {
-        padding: 1em;
-    }
 }
-
-
