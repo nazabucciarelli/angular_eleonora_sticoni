@@ -37,4 +37,9 @@ export class NavmenuComponent {
     navbarCollapse.classList.remove('show');
   }
 
+  goToRoute(route: string): void {
+    window.scrollTo(0, 0); // Esto asegura que la página se desplace a la parte superior antes de cambiar la ruta
+    this.router.navigateByUrl(route);
+  }
+
 }

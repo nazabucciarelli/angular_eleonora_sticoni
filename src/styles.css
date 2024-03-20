@@ -55,7 +55,12 @@ body {
     margin-bottom: 1em;
     font-size: 1em;
     font-family: Helvetica, sans-serif;
-    color: black;
+    color: rgb(73, 73, 73);
+}
+
+.text b {
+    font-size: 1em !important;
+    font-family: Helvetica, sans-serif !important;
 }
 
 
@@ -231,21 +236,35 @@ nav {
 
 /* start formation and workshops*/
 
-.landscape-formation {
-    background-image:  linear-gradient( rgba(104, 53, 81, 0),rgba(104, 53, 81, 0.781)), url(assets/landscape.jpg);
+.landscape-container{
+    margin-top: 3vh;
     height: 50vh;
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landscape-gallery{
+    background-image:  linear-gradient( rgba(104, 53, 81, 0),rgba(104, 53, 81, 0.781)), url(assets/landscape-gallery.jpg);
+    background-position-y: 10%;
+
+}
+
+.landscape-formation{
+    background-image:  linear-gradient( rgba(104, 53, 81, 0),rgba(104, 53, 81, 0.781)), url(assets/landscape-formation.jpg);
     background-position-y: 60%;
 }
 
-.landscape-formation h1{
+.landscape-container h1{
     font-size: 4em;
     color:white;
 }
 
-.landscape-formation .subtitle-landscape{
+.landscape-container .subtitle-landscape{
     font-weight: 300;
     font-family: Helvetica, sans-serif;
     color: white;
@@ -256,10 +275,8 @@ nav {
     font-size: 6em;
 }
 
-.formation-container p {
-    font-size: 1.2em;
-    font-family: Helvetica, sans-serif;
-    color: black;
+.formation-container p, .formation-container b{
+    font-size: 1.1em;
 }
 
 
@@ -287,7 +304,7 @@ nav {
 
 /* ends about me */
 
-/* start footer */
+/* starts footer */
 
 footer {
     box-shadow: 0px 0px 50px 10px rgba(114, 114, 114, 0.13);
@@ -308,13 +325,22 @@ footer section {
     color: rgba(0, 0, 0, 0.13);
 }
 
-footer p:hover,footer i:hover, footer img:hover{
+footer a:hover,footer i:hover, footer img:hover, footer p:hover{
     transition: 0.3s;
     transform: scale(1.1);
+    color: #a0a0a0 !important;
 }
 
-footer p,footer i, footer img{
+footer a,footer i, footer img, footer p{
     transition: 0.3s;
+}
+
+footer i {
+    font-size: 1.5em;
+}
+
+.copyright {
+    font-family: Helvetica, sans-serif;
 }
 
 

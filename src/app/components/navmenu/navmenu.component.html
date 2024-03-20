@@ -10,11 +10,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a routerLink="/home" class="nav-link" aria-current="page">INICIO</a>
+                <a (click)="goToRoute('/home')" class="nav-link" aria-current="page">INICIO</a>
                 <a (click)="scrollTo('community')" class="nav-link">COMUNIDAD</a>
-                <a routerLink="/about-me" class="nav-link">SOBRE MI</a>
-                <a routerLink="/gallery" class="nav-link">GALERÍA</a>
-                <a routerLink="/formation" class="nav-link">FORMACIÓN Y TALLERES</a>
+                <a (click)="goToRoute('/about-me')" class="nav-link">SOBRE MI</a>
+                <a (click)="goToRoute('/gallery')" class="nav-link">GALERÍA</a>
+                <a (click)="goToRoute('/formation')" class="nav-link">FORMACIÓN Y TALLERES</a>
             </div>
         </div>
     </div>
