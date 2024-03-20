@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CommunityComponent {
 
+  redirectToPage(url:string) {
+    window.open(url,"_blank");
+  }
+
 }

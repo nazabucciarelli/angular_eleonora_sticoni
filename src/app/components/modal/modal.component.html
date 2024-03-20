@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h4 class="modal-title">¡No te pierdas nada!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <p>¡Unite a nuestra comunidad de Whatsapp y mantenete al tanto de las novedades!</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
+<button type="button" class="btn btn-success" ngbAutofocus (click)="redirectToWhatsapp()">Unirme ahora</button>
+
+</div>

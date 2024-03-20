@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlertDialogComponent } from './alert-dialog.component';
+import { ModalComponent } from './modal.component';
 
-describe('AlertDialogComponent', () => {
-  let component: AlertDialogComponent;
-  let fixture: ComponentFixture<AlertDialogComponent>;
+describe('ModalComponent', () => {
+  let component: ModalComponent;
+  let fixture: ComponentFixture<ModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AlertDialogComponent ]
+      imports: [ModalComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(AlertDialogComponent);
+    
+    fixture = TestBed.createComponent(ModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

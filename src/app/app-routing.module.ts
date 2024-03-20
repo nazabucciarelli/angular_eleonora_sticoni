@@ -6,13 +6,11 @@ import { FormationComponent } from './components/formation/formation.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommunityComponent } from './components/community/community.component';
-import { SessionsComponent } from './components/sessions/sessions.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch: 'full'},
   {path: 'formation', component: FormationComponent},
   {path: 'community',component: CommunityComponent},
-  {path: 'sessions',component:SessionsComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about-me', component: AboutmeComponent},

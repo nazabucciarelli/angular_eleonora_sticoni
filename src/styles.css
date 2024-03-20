@@ -55,6 +55,7 @@ body {
     margin-bottom: 1em;
     font-size: 1em;
     font-family: Helvetica, sans-serif;
+    color: black;
 }
 
 
@@ -79,12 +80,13 @@ ul li::before {
 }
 
 .brand-button {
+    font-family: var(--primary-font) !important;
     background-color: var(--primary-color);
     border: none;
     border-radius: 2em;
     color: #fff;
     padding: 0.5em 5em;
-    box-shadow: 5px 5px 10px 5px #00000050;
+    box-shadow: 5px 5px 10px 5px #00000036;
     transition: 0.3s;
 }
 
@@ -114,6 +116,21 @@ ul li::before {
     margin: 5em;
 }
 
+.modal-body p, .modal-title,  button {
+    font-family: Helvetica, sans-serif !important;
+    color: black;
+}
+
+.page-img {
+    border-radius: 1em !important;
+    transition: 0.3s !important;
+}
+
+.page-img:hover{
+    transition: 0.3s !important;
+    transform: scale(0.95) !important;
+}
+
 /* end general styles*/
 
 /* start navbar */
@@ -126,7 +143,7 @@ nav {
 .nav-link {
     font-family: var(--primary-font);
     color: rgba(255, 255, 255, 0.945) !important;
-    font-size: 1em !important;
+    font-size: 0.9em !important;
     transition: 0.3s !important;
     padding: 0.5em !important;
 }
@@ -147,7 +164,7 @@ nav {
     justify-content: flex-end;
 }
 
-/* start home */
+/* starts home */
 
 .header-title h2 {
     color: #fff;
@@ -166,7 +183,6 @@ nav {
     height: 95vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.082)), url(assets/landscape_background.jpg);
     background-position-y: 100%;
-    background-position-x: 150px;
 }
 
 .home-background div {
@@ -189,15 +205,19 @@ nav {
 }
 
 .phrase-container {
-    background-color: #fff;
+    background-color: var(--primary-color);
     margin-top: 2em;
-    color: var(--primary-color);
-
+    color: #f1f1f1;
+    margin-top: -0.1em;
 }
 
 .phrase-container span{
-    color: var(--secondary-color);
+    color: var(--light-color) !important;
+}
 
+.phrase-container button {
+    color: var(--primary-color);
+    background-color: var(--light-color);
 }
 
 /* ends home*/
@@ -205,20 +225,43 @@ nav {
 
 /* start sessions*/
 
-.sessions img {
-    margin: 1em;
-    border-radius: 1em;
-    transition: 0.3s !important;
-}
 
-.sessions img:hover{
-    transition: 0.3s !important;
-    transform: scale(0.9) !important;
-}
 
 /* end sessions*/
 
 /* start formation and workshops*/
+
+.landscape-formation {
+    background-image:  linear-gradient( rgba(104, 53, 81, 0),rgba(104, 53, 81, 0.781)), url(assets/landscape.jpg);
+    height: 50vh;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 60%;
+}
+
+.landscape-formation h1{
+    font-size: 4em;
+    color:white;
+}
+
+.landscape-formation .subtitle-landscape{
+    font-weight: 300;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    font-size: 1em;
+}
+
+.formation-container .cursive-title{
+    font-size: 6em;
+}
+
+.formation-container p {
+    font-size: 1.2em;
+    font-family: Helvetica, sans-serif;
+    color: black;
+}
+
 
 /* ends formation and workshops*/
 
@@ -238,175 +281,43 @@ nav {
 
 .subtitle-about {
     font-size: 4em;
+    color: var(--primary-color);
 }
 
-.about-me img {
-    border-radius: 1em;
-    height: 100%;
-    max-height: 500px;
-    transition: 0.3s;
-}
-
-.about-me img:hover{
-    transition: 0.3s !important;
-    transform: scale(0.9) !important;
-}
 
 /* ends about me */
 
 /* start footer */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    background-color: #ffffff;
     box-shadow: 0px 0px 50px 10px rgba(114, 114, 114, 0.13);
+    background-color: var(--primary-color);
 }
 
-.footer-row {
-    width: 100%;
-    height: 100%;
+footer a,footer  h6, footer div {
+    text-decoration: none !important;
+    color: #fff !important;
 }
 
-.footer-row div {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer a {
+    font-family: Helvetica, sans-serif;
 }
 
-.red {
-    height: 40px;
-    margin: 1em;
-    transition: 0.4s;
+footer section {
+    border-bottom: 1px solid;
+    color: rgba(0, 0, 0, 0.13);
 }
 
-.red:hover {
-    transition: 0.4s;
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.10);
-    cursor: pointer;
+footer p:hover,footer i:hover, footer img:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
 }
 
-.footer-container {
-    text-align: center;
-    height: 100%;
-
+footer p,footer i, footer img{
+    transition: 0.3s;
 }
 
-/* start alert styles */
-
-.alert-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-}
-
-/* end alert styles */
 
 /* Responsive */
 
 /* Portatil */
-@media screen and (max-height: 900px) {
-
-    .brandButton {
-        font-size: 1em;
-    }
-
-}
-
-@media screen and (max-width: 800px) {
-    .home-background {
-        background-position: 45%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.404)), url(assets/vertical.JPG);
-        background-attachment: local;
-    }
-
-    .home-background .container {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 600px) {
-
-    .cursive-title{
-        font-size: 6em;
-    }
-
-    .about-me img {
-        float: none;
-        width: 100%;
-        margin: 0;
-        padding: 1em;
-        border-radius: 2em;
-    }
-
-    #avaltext {
-        font-size: 0.6em;
-        width: 100%;
-    }
-
-    .brandButton {
-        transform: scale(0.9);
-    }
-
-    .title {
-        font-size: 1.8em;
-    }
-
-    .subtitle {
-        font-size: 1.7em;
-    }
-
-    .small-text {
-        font-size: 0.7em;
-    }
-
-    .form-title {
-        font-size: 20px;
-    }
-
-    .form-subtitle {
-        font-size: 16px;
-    }
-
-    .wsp-button {
-        padding: 16px;
-    }
-
-    .nav-link {
-        font-size: 1em;
-    }
-
-    .navbar-nav a {
-        font-size: 1em !important;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 300px) {
-
-    .wsp-button {
-        font-size: 14px;
-        padding: 14px;
-    }
-
-    .wsp-button img {
-        width: 15px;
-    }
-
-    #logo {
-        width: 140px;
-    }
-
-}

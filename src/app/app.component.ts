@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/modal/modal.component';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,9 @@ import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.com
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(public router: Router, private dialog: MatDialog) { }
+  private modalService = inject(NgbModal);
+
+  constructor(public router: Router) { }
 
   ngOnInit() {
     // Suscribirse al evento de navegación
@@ -17,19 +20,17 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
       }
-      
-      setInterval(() => {
-        this.openAlertDialog();
-      }, 120000);
     });
+      setTimeout(()=> {
+        this.open();
+
+      },40000)
   }
 
-  openAlertDialog() {
-    const dialogRef = this.dialog.open(AlertDialogComponent, {
-      width: '250px',
-      data: { message: 'Este es un mensaje de alerta' }
-    });
-  }
-
+  
+	open() {
+		const modalRef = this.modalService.open(ModalComponent, { centered: true });
+	}
+  
 
 }

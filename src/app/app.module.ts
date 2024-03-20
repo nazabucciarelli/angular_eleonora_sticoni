@@ -13,8 +13,7 @@ import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommunityComponent } from './components/community/community.component';
-import { SessionsComponent } from './components/sessions/sessions.component';
-import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +27,8 @@ import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.com
     AboutmeComponent,
     GalleryComponent,
     CommunityComponent,
-    SessionsComponent,
-    AlertDialogComponent
-    ],
+    FooterComponent
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
