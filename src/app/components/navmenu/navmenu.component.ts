@@ -19,6 +19,7 @@ export class NavmenuComponent {
     this.router.navigateByUrl('/home').then(() => {
       this.scrollService.scrollToSection(sectionId, 80);
     }); 
+    this.closeNavbar();
   }
 
   @HostListener('document:click', ['$event'])
@@ -40,6 +41,7 @@ export class NavmenuComponent {
   goToRoute(route: string): void {
     window.scrollTo(0, 0); // Esto asegura que la página se desplace a la parte superior antes de cambiar la ruta
     this.router.navigateByUrl(route);
+    this.closeNavbar();
   }
 
 }

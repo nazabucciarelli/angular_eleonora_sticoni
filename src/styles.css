@@ -53,7 +53,7 @@ body {
     text-indent: 2%;
     text-align: justify;
     margin-bottom: 1em;
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: Helvetica, sans-serif;
     color: rgb(73, 73, 73);
 }
@@ -171,6 +171,11 @@ nav {
 
 /* starts home */
 
+.header-title{
+    height: 100%;
+    padding: 5em;
+}
+
 .header-title h2 {
     color: #fff;
     font-size: 2em;
@@ -211,9 +216,9 @@ nav {
 
 .phrase-container {
     background-color: var(--primary-color);
-    margin-top: 2em;
     color: #f1f1f1;
-    margin-top: -0.1em;
+    margin-top: -1em;
+    padding: 5em;
 }
 
 .phrase-container span{
@@ -226,13 +231,6 @@ nav {
 }
 
 /* ends home*/
-
-
-/* start sessions*/
-
-
-
-/* end sessions*/
 
 /* start formation and workshops*/
 
@@ -273,10 +271,6 @@ nav {
 
 .formation-container .cursive-title{
     font-size: 6em;
-}
-
-.formation-container p, .formation-container b{
-    font-size: 1.1em;
 }
 
 
@@ -343,7 +337,139 @@ footer i {
     font-family: Helvetica, sans-serif;
 }
 
+.logo-footer{
+    width: 80%;
+}
+
 
 /* Responsive */
 
-/* Portatil */
+/* Mobile */
+ 
+@media only screen and (max-width: 600px) {
+
+    #app-home div{
+        width: 100% !important;
+    }
+
+    .header-title h2, .header-title h1{
+        font-size: 1.3em;
+        width: 100% !important;
+    }
+
+    .header-title {
+        height: 50%;
+        padding: 1em;
+    }
+
+    .home-background{
+        background-attachment: local;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-position-x: 87%;
+        background-position-y: 30px;
+    }
+
+    .phrase-container {
+        margin-top: -1.5em;
+    }
+
+    .phrase-container h2{
+        font-size: 1em;
+        margin-top: 1em;
+    }
+
+    .brand-button {
+        font-size: 0.8em;
+        padding: 1em 2em;
+    }
+
+    .title{
+        font-size: 2em;
+    }
+
+    .cursive-title{
+        font-size: 7em;
+    }
+
+    .page-img {
+        width: 100%;
+    }
+
+    .logo-footer {
+        margin-bottom: 1em;
+        margin-top: -1em;
+        width: 100px;
+    }
+
+    .nav-link{
+        text-align: center;
+        font-size: 0.8em !important;
+    }
+
+    .subtitle-about {
+        font-size: 3em;
+    }
+
+    .text{
+        font-size: 1em;
+    }
+
+    .page-img{
+        margin-top: 1em;
+    }
+
+    .landscape-container{
+        background-size: cover;
+    }
+
+    .landscape-container h1 {
+        font-size: 2em;
+        padding: 0.3em;
+    }
+
+    .landscape-formation{
+        background-position-x: 90%;
+    }
+
+    .formation-container .cursive-title{
+        font-size: 3em;
+    }
+
+}
+
+/* Tablet */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1024px) {
+    .home-background {
+        background-position-x: 100% ;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-title{
+        height: 30%;
+    }
+
+    .landscape-container{
+        background-size: cover;
+        margin-top: -2em;
+    }
+
+    .landscape-formation{
+        background-position-x: 70% ;
+    }
+
+    .phrase-container h2{
+        font-size: 1.5em;
+    }
+
+    #community img {
+        width: 100%;
+    }
+
+    #community {
+        padding: 4em;
+    }
+}
