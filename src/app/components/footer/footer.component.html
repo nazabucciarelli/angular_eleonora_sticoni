@@ -1,7 +1,7 @@
 <footer class="text-center p-0 text-lg-start text-muted">
     <section class="d-flex justify-content-center justify-content-lg-center p-4 w-100">
         <div>
-            <a href="" class="mx-3">
+            <a href="https://www.instagram.com/eleonora.sticoni/" class="mx-3">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="" class="mx-3">
@@ -20,13 +20,13 @@
                         Sobre Eleonora
                     </h6>
                     <p>
-                        <a href="#!">Sobre mi</a>
+                        <a (click)="goToRoute('/about-me')">Sobre mi</a>
                     </p>
                     <p>
-                        <a href="#!">Galería</a>
+                        <a (click)="goToRoute('/gallery')">Galería</a>
                     </p>
                     <p>
-                        <a href="#!">Testimonios</a>
+                        <a (click)="scrollTo('testimonials')">Testimonios</a>
                     </p>
                 </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -34,13 +34,13 @@
                         RECURSOS
                     </h6>
                     <p>
-                        <a href="#!">Inicio</a>
+                        <a (click)="goToRoute('/home')">Inicio</a>
                     </p>
                     <p>
-                        <a href="#!">Comunidad</a>
+                        <a (click)="scrollTo('community')">Comunidad</a>
                     </p>
                     <p>
-                        <a href="#!">Formación y Talleres</a>
+                        <a (click)="goToRoute('/formation')">Formación y Talleres</a>
                     </p>
                 </div>
             </div>

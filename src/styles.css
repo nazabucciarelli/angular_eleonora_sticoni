@@ -201,19 +201,6 @@ nav {
     align-items: center;
 }
 
-.aval-container {
-    margin-bottom: 5em;
-}
-
-#avalimg {
-    height: 30px;
-}
-
-#avaltext {
-    font-size: 0.7em;
-    width: 20%;
-}
-
 .phrase-container {
     background-color: var(--primary-color);
     color: #f1f1f1;
@@ -273,7 +260,6 @@ nav {
     font-size: 6em;
 }
 
-
 /* ends formation and workshops*/
 
 /* starts community */
@@ -295,8 +281,47 @@ nav {
     color: var(--primary-color);
 }
 
-
 /* ends about me */
+
+/* starts testimonials */
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon, .carousel-indicators {
+   filter: invert(0.5);
+}
+
+.carousel .text {
+    font-size: 1em;
+    padding: 1em;
+    text-align: start;
+}
+
+#testimonials h3 {
+    color: var(--secondary-color);
+}
+
+.carousel-content {
+    padding:4em;
+}
+
+.vertical-marker{
+    color: #68670f9a;
+    position: absolute;
+    transform: rotate(-90deg); /* Rotación de 180 grados para compensar la rotación por defecto */
+    transform-origin: top left; /* Establece el origen de la rotación en la esquina superior izquierda */
+    white-space: nowrap;
+    margin-left:-4em;
+    font-size: 0.9em;
+    margin-bottom: 15em;
+ }
+
+.carousel-img {
+    padding: 1em;
+    max-width: 300px;
+    border-radius: 2em;
+}
+
+/* ends testimonials */
 
 /* starts footer */
 
@@ -323,6 +348,7 @@ footer a:hover,footer i:hover, footer img:hover, footer p:hover{
     transition: 0.3s;
     transform: scale(1.1);
     color: #a0a0a0 !important;
+    cursor: pointer;
 }
 
 footer a,footer i, footer img, footer p{
@@ -340,7 +366,6 @@ footer i {
 .logo-footer{
     width: 80%;
 }
-
 
 /* Responsive */
 
@@ -436,12 +461,25 @@ footer i {
         font-size: 3em;
     }
 
+    .vertical-marker {
+        margin-left:-3em;
+        margin-bottom: 0;
+    }
+
+    .carousel-content {
+        padding:0.3em;
+    }
+
+    #testimonials{
+        flex-direction: column;
+    }
+
 }
 
 /* Tablet */
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1050px) {
     .home-background {
         background-position-x: 100% ;
         display: flex;
@@ -450,6 +488,7 @@ footer i {
 
     .header-title{
         height: 30%;
+        font-size: 0.8em;
     }
 
     .landscape-container{
@@ -459,6 +498,10 @@ footer i {
 
     .landscape-formation{
         background-position-x: 70% ;
+    }
+
+    .phrase-container {
+        margin-top: -2em;
     }
 
     .phrase-container h2{
@@ -471,5 +514,12 @@ footer i {
 
     #community {
         padding: 4em;
+    }
+    .page-img{
+        width: 20%;
+    }
+
+    #testimonials{
+        flex-direction: column;
     }
 }

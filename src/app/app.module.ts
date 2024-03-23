@@ -14,6 +14,8 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommunityComponent } from './components/community/community.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutmeComponent,
     GalleryComponent,
     CommunityComponent,
-    FooterComponent
-      ],
+    FooterComponent,
+    CarouselComponent,
+    TestimonialsComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
