@@ -9,7 +9,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { FormationComponent } from './components/formation/formation.component';
-import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommunityComponent } from './components/community/community.component';
@@ -25,7 +24,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NotfoundComponent,
     NavmenuComponent,
     FormationComponent,
-    WorkshopsComponent,
     AboutmeComponent,
     GalleryComponent,
     CommunityComponent,
