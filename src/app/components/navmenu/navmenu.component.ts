@@ -38,19 +38,9 @@ export class NavmenuComponent {
     navbarCollapse.classList.remove('show');
   }
 
-  goToRoute(route: string): void {
+  goToRoute(route: string){
     this.closeNavbar();
-    if(window.scrollY <= 100){
-      this.router.navigateByUrl(route); 
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' }); 
-      window.addEventListener('scroll', () => {
-        if (window.scrollY === 0) { 
-          this.router.navigateByUrl(route); 
-          window.removeEventListener('scroll', () => {}); 
-        }
-      });
-    }
+    this.scrollService.goToRoute(route)
   }
 
 }

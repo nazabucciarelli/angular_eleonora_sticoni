@@ -15,10 +15,7 @@ export class FooterComponent {
   }
 
   scrollTo(sectionId: string) {
-    this.router.navigateByUrl('/home').then(() => {
-      this.scrollService.scrollToSection(sectionId, 80);
-    }); 
-    this.closeNavbar();
+    this.scrollService.scrollToSection(sectionId);
   }
 
   closeNavbar() {
@@ -27,9 +24,7 @@ export class FooterComponent {
   }
 
   goToRoute(route: string): void {
-    window.scrollTo(0, 0); // Esto asegura que la página se desplace a la parte superior antes de cambiar la ruta
-    this.router.navigateByUrl(route);
-    this.closeNavbar();
+    this.scrollService.goToRoute(route);
   }
 
 } 
