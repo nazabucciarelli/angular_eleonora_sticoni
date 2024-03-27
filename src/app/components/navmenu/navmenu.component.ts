@@ -8,7 +8,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
   styleUrls: ['./navmenu.component.css']
 })
 export class NavmenuComponent {
-  
+
   constructor(private elementRef: ElementRef, private scrollService: ScrollService,
     private router: Router) { }
 
@@ -18,7 +18,7 @@ export class NavmenuComponent {
   scrollTo(sectionId: string) {
     this.router.navigateByUrl('/home').then(() => {
       this.scrollService.scrollToSection(sectionId, 80);
-    }); 
+    });
     this.closeNavbar();
   }
 
@@ -28,7 +28,7 @@ export class NavmenuComponent {
     const navbarToggler = this.elementRef.nativeElement.querySelector('.navbar-toggler');
     const navbarCollapse = this.elementRef.nativeElement.querySelector('.navbar-collapse');
 
-    if (!navbarToggler.contains(clickedElement) && !navbarCollapse.contains(clickedElement) ) {
+    if (!navbarToggler.contains(clickedElement) && !navbarCollapse.contains(clickedElement)) {
       navbarCollapse.classList.remove('show');
     }
   }
@@ -39,9 +39,18 @@ export class NavmenuComponent {
   }
 
   goToRoute(route: string): void {
-    window.scrollTo(0, 0); // Esto asegura que la página se desplace a la parte superior antes de cambiar la ruta
-    this.router.navigateByUrl(route);
     this.closeNavbar();
+    if(window.scrollY <= 100){
+      this.router.navigateByUrl(route); 
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' }); 
+      window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) { 
+          this.router.navigateByUrl(route); 
+          window.removeEventListener('scroll', () => {}); 
+        }
+      });
+    }
   }
 
 }

@@ -19,11 +19,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.navigationSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Activar las animaciones AOS después de que la página haya terminado de cargar y desplazarse hacia arriba
         setTimeout(() => {
-          AOS.refresh()
+          AOS.refresh();
           AOS.init();
-        }, 1000); // Ajusta el tiempo según sea necesario
+        }, 1000); 
       }
     });
 
