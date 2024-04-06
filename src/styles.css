@@ -222,7 +222,6 @@ nav {
 /* start formation and workshops*/
 
 .landscape-container{
-    margin-top: 3vh;
     height: 50vh;
     background-position: center;
     background-size: 100%;
@@ -276,6 +275,10 @@ nav {
 
 /* starts about me */
 
+.about-me {
+    margin-top: 5em;
+}
+
 .subtitle-about {
     font-size: 4em;
     color: var(--primary-color);
@@ -298,10 +301,6 @@ nav {
 
 #testimonials h3 {
     color: var(--secondary-color);
-}
-
-#testimonials {
-
 }
 
 .carousel-content {
@@ -382,7 +381,7 @@ footer i {
     }
 
     .header-title h2, .header-title h1{
-        font-size: 1.3em;
+        font-size: 1em;
         width: 100% !important;
     }
 
@@ -474,9 +473,6 @@ footer i {
         padding:1em;
     }
 
-    #testimonials{
-        flex-direction: column;
-    }
 
     .carousel .carousel-img{
         margin-bottom: 1.8em;
@@ -487,13 +483,16 @@ footer i {
         padding-top: 0;
     }
     
+    #testimonials {
+        flex-direction: column;
+    }
 
 }
 
 /* Tablet */
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 601px) and (max-width: 1050px) {
+@media only screen and (min-width: 601px) and (max-width: 1400px) {
     .home-background {
         background-position-x: 100% ;
         display: flex;
@@ -532,8 +531,7 @@ footer i {
     .page-img{
         width: 20%;
     }
-
-    #testimonials{
+    #testimonials {
         flex-direction: column;
     }
 }
